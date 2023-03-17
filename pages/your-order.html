@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/functions.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Your-Order</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-order">
+            <div class="header">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <img class="logo" src="../images/logo-removebg-preview.png" alt="Logo">
+                      <h1>Burguer House</h1>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="ms-auto"></div>
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#create-account">Crie Sua Conta</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#do-order">Faça Seu Pedido</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Retornar a Página Principal</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+        <div class="create-account" id="create-account">
+            <h2>Faça seu Cadastro</h2>
+            <form action="post">
+                <div class="name">
+                    <label for="name">Insira Seu Nome Completo:</label>
+                    <input type="text" id="name" placeholder="Digite Seu nome" minlength="10" >
+                </div>
+                <div class="cpf">
+                    <label for="cpf">Insira Seu CPF:</label>
+                    <input type="text" name="cpf" id="cpf" onkeyup="mask_data();" placeholder="Apenas números" maxlength="14">
+                </div>
+                <div class="email">
+                    <label for="email">Insira Seu E-mail:</label>
+                    <input type="mail" name="email" id="email">
+                </div>
+                <div class="endereco">
+                    <label for="endereco">Insira Seu Endereço:</label>
+                    <input type="text" name ="endereco" id="endereco" minlength="10">
+                </div>
+                <div class="cell">
+                    <label for="cell">Insira Seu Número Para Conteto:</label>
+                    <input type="text" name="cell" id="cell" onkeyup="mask_cell()" min="1" max="14">
+                </div>
+                
+            </form>
+    
+        </div>
+        <div class="do-order" id="do-order">
+            <form action="post">
+                <div class="lanche">
+                    <h2>Faça o Pedido</h2>
+                    <label for="lanche">Qual Sanduíche Você Escolheu?</label>
+                    <select name="lanche" id="lanche" onclick="calcular()">
+                        <option value="1">Whopper</option>
+                        <option value="2">Stacker Duplo Bacon</option>
+                        <option value="3">Rodeio Duplo</option>
+                        <option value="4">Cheddar Duplo</option>
+                        <option value="5">Chicken Crisp</option>
+                        <option value="6">Chicken Duplo</option>
+                        <option value="7">Chicken Júnior</option>
+                        <option value="8">Big King</option>
+                    </select>
+                </div>
+                <div class="quantity">
+                    <label for="quantity">Quantos Lanches Você Quer?</label>
+                    <select name="quantity" id="quantity" onclick="calcular()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="total">
+                    <label for="total" >Total do Pedido:</label>
+                    <input type="text" id="total" readonly="readonly" >
+                </div>
+                <div class="send">
+                    <label for="submit">Clique Para Fazer o Pedido</label>
+                    <input type="submit" name ="send" value="Enviar" onclick="alertar()">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

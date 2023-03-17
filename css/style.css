@@ -1,0 +1,87 @@
+
+body{
+    font-family: sans-serif;
+    text-align: center;
+}
+.header{
+    background-color: #fc930a;
+}
+.container{
+    background-color: #f7c41f;   
+}
+h1{
+    text-align: center;
+}
+.logo{
+    width: 15%;
+}
+.pictures{
+    width: 200px;
+    height: 200px;
+}
+.teste
+{
+    text-align: right;
+}
+.nav-link{
+    text-transform: uppercase;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+}
+.footer .container{
+  margin-top: 50px;
+}
+.main-content .card{
+
+    background-color: #fead26;
+}
+svg{
+    color: black;
+}
+.container .create-account{
+    width: 100%;
+    padding: 30px;
+    background-color: #fead26;
+    border-radius:10px 20px 30px 10px;
+}
+.container .create-account .name{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .create-account .cpf{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .create-account .email{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .create-account .endereco{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .create-account .celular{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .do-order{
+    width: 100%;
+    padding: 30px;
+    background-color: #eb5f07;
+    border-radius:10px 20px 30px 10px;
+
+    
+}
+.container .do-order .lanche{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .do-order .quantity{
+    width: 100%;
+    margin: 15px 0;
+}
+.container .do-order .send{
+    margin-top: 8px;
+}
